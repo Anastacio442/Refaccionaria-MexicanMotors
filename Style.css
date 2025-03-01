@@ -1,0 +1,11 @@
+header {
+    z-index: 100;
+}
+.description {
+    height: 25px;
+    overflow: hidden;
+    transition: height .3 ease-in .3s;
+}
+.description {
+    height: 80px;
+}

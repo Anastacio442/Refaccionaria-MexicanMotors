@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MexicanMotors</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="Style2.css">
+    <style>
+        .carrito-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100%;
+            background: white;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease;
+            padding: 20px;
+            z-index: 1000;
+        }
+        .carrito-sidebar.active {
+            right: 0;
+        }
+        .carrito-sidebar h3 {
+            margin-bottom: 20px;
+        }
+        .carrito-sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .carrito-sidebar ul li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .carrito-sidebar .total {
+            font-weight: bold;
+            text-align: right;
+            margin-top: 20px;
+        }
+        .carrito-sidebar button {
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://media.istockphoto.com/id/497859268/es/vector/motocicleta-concepto-de-vector-de-repuestos.jpg?s=612x612&w=0&k=20&c=wdnLKR7PkJeMIHO3PGo4AB_u4JTIV-Rh52xFFkgtt4I=" alt="Logo" height="60">
+                <span class="text-info">Mexican</span>Motor
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="Inicio.html"><img src="https://cdn-icons-png.flaticon.com/512/3388/3388815.png" alt="Inicio" height="18"> INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#" id="abrirCarrito"><img src="https://w1.pngwing.com/pngs/703/933/png-transparent-add-icon-add-to-cart-icon-cart-icon-shopping-cart-icon-shopping-cart-icon-icon-vehicle-line-coloring-book-rolling.png" alt="Carrito" height="30"> CARRITO</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            <img src="https://images.vexels.com/media/users/3/156236/isolated/preview/b3c5ec863b00e35cfd10c73f1c9c5969-icono-de-piloto-de-moto.png" alt="Productos" height="30"> PRODUCTOS
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="Productos_Yamaha.html">Yamaha</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="Productos_Italika.html">Italika</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="Productos_honda.html">Honda</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="Productos_suzuki.html">Suzuki</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a  class="dropdown-item" href="Productos_Rizoma.html"> vento</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="Productos_cascos.html">Cascos</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./Usuario.html" ><img src="img/Logo de inicio.jpg" alt="#" height="18">USUARIO</a>
+                    </li>
+                </ul>
+                <form class="d-flex" id="searchForm">
+                    <input class="form-control me-2" type="search" id="searchInput"placeholder="Buscar producto">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="p-3 mb-3 bg-danger text-dark">
+        <h2 class="h2 m-4 text-dark text-center">Productos Italika</h2>
+    </div>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <!-- Producto 1 -->
+                <div class="col-md-4 product" data-name="SENSOR DE TEMPERATURA ITALIKA VORT-X 300 VX250">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="./img/sensor.webp" alt="SENSOR DE TEMPERATURA ITALIKA VORT-X 300 VX250">
+                        <div class="card-body">
+                            <p class="card-text text-center">SENSOR DE TEMPERATURA ITALIKA VORT-X 300 VX250</p>
+                            <h5 class="text-danger">Precio <span class="precio">$ 980.00</span></h5>
+                            <div class="col text-center">
+                                <button class="btn btn-outline-success" onclick="agregarAlCarrito('ASENSOR DE TEMPERATURA ITALIKA VORT-X 300 VX250',  980.00)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 2 -->
+                <div class="col-md-4 product" data-name="KIT CILINDRO COMPLETO KIMTEC ITALIKA 125Z">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="./img/cilindro.webp" alt="KIT CILINDRO COMPLETO KIMTEC ITALIKA 125Z">
+                        <div class="card-body">
+                            <p class="card-text text-center">KIT CILINDRO COMPLETO KIMTEC ITALIKA 125Z</p>
+                            <h5 class="text-danger">Precio <span class="precio">$815.00</span></h5>
+                            <div class="col text-center">
+                                <button class="btn btn-outline-success" onclick="agregarAlCarrito('KIT CILINDRO COMPLETO KIMTEC ITALIKA 125Z', 815.00)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 3 -->
+                <div class="col-md-4 product" data-name="KIT ENGRANES PRIMARIO Y SECUNDARIO KIMTEC ITALIKA 125Z">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="./img/engranajes.webp" alt="KIT ENGRANES PRIMARIO Y SECUNDARIO KIMTEC ITALIKA 125Z">
+                        <div class="card-body">
+                            <p class="card-text text-center">KIT ENGRANES PRIMARIO Y SECUNDARIO KIMTEC ITALIKA 125Z</p>
+                            <h5 class="text-danger">Precio <span class="precio">$596.97</span></h5>
+                            <div class="col text-center">
+                                <button class="btn btn-outline-success" onclick="agregarAlCarrito('KIT ENGRANES PRIMARIO Y SECUNDARIO KIMTEC ITALIKA 125Z', 596.97)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 4 -->
+                <div class="col-md-4 product" data-name="KIT EMPAQUES DE MOTOR COMPLETO KIMTEC ITALIKA 125Z">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="./img/empaques.webp" alt="KIT EMPAQUES DE MOTOR COMPLETO KIMTEC ITALIKA 125Z">
+                        <div class="card-body">
+                            <p class="card-text text-center">KIT EMPAQUES DE MOTOR COMPLETO KIMTEC ITALIKA 125Z</p>
+                            <h5 class="text-danger">Precio <span class="precio">$72.42</span></h5>
+                            <div class="col text-center">
+                                <button class="btn btn-outline-success" onclick="agregarAlCarrito('KIT EMPAQUES DE MOTOR COMPLETO KIMTEC ITALIKA 125Z', 72.42)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 5 -->
+                <div class="col-md-4 product" data-name="MEDIDOR DE ACEITE KIMTEC ITALIKA 125Z BAYONETA">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="./img/indicador de aceite.webp" alt="MEDIDOR DE ACEITE KIMTEC ITALIKA 125Z BAYONETA">
+                        <div class="card-body">
+                            <p class="card-text text-center">MEDIDOR DE ACEITE KIMTEC ITALIKA 125Z BAYONETA</p>
+                            <h5 class="text-danger">Precio <span class="precio">$20.52</span></h5>
+                            <div class="col text-center">
+                                <button class="btn btn-outline-success" onclick="agregarAlCarrito('MEDIDOR DE ACEITE KIMTEC ITALIKA 125Z BAYONETA', 20.52)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 6 -->
+                <div class="col-md-4 product" data-name="SALPICADERA DELANTERA KIMTEC ITALIKA 125Z NEGRO CON ROJO">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="./img/salpicadera.webp" alt="SALPICADERA DELANTERA KIMTEC ITALIKA 125Z NEGRO CON ROJO">
+                        <div class="card-body">
+                            <p class="card-text text-center">SALPICADERA DELANTERA KIMTEC ITALIKA 125Z NEGRO CON ROJO</p>
+                            <h5 class="text-danger">Precio <span class="precio">$465.32</span></h5>
+                            <div class="col text-center">
+                                <button class="btn btn-outline-success" onclick="agregarAlCarrito('SALPICADERA DELANTERA KIMTEC ITALIKA 125Z NEGRO CON ROJO ', 465.32)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- Carrito de Compras (Sidebar) -->
+      <div class="carrito-sidebar" id="carritoSidebar">
+        <h3>Carrito de Compras</h3>
+        <ul id="listaCarrito"></ul>
+        <div class="total">Total: $<span id="totalCarrito">0.00</span></div>
+        <button class="btn btn-danger" onclick="vaciarCarrito()">Vaciar Carrito</button>
+        <button class="btn btn-secondary" onclick="cerrarCarrito()">Cerrar</button>
+    </div>
+
+    <script>
+        // Variables globales
+        let carrito = [];
+        let total = 0;
+
+        // Función para abrir el carrito
+        document.getElementById('abrirCarrito').addEventListener('click', () => {
+            document.getElementById('carritoSidebar').classList.add('active');
+        });
+
+        // Función para cerrar el carrito
+        function cerrarCarrito() {
+            document.getElementById('carritoSidebar').classList.remove('active');
+        }
+
+        // Función para agregar productos al carrito
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            total += precio;
+            actualizarCarrito();
+        }
+
+        // Función para actualizar el carrito
+        function actualizarCarrito() {
+            const listaCarrito = document.getElementById('listaCarrito');
+            const totalCarrito = document.getElementById('totalCarrito');
+
+            // Limpiar la lista
+            listaCarrito.innerHTML = '';
+
+            // Mostrar los productos en el carrito
+            carrito.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `${item.nombre} - $${item.precio.toFixed(2)} <button class="btn btn-sm btn-danger" onclick="eliminarDelCarrito(${index})">Eliminar</button>`;
+                listaCarrito.appendChild(li);
+            });
+
+            // Actualizar el total
+            totalCarrito.textContent = total.toFixed(2);
+        }
+
+        // Función para eliminar un producto del carrito
+        function eliminarDelCarrito(index) {
+            const itemEliminado = carrito.splice(index, 1)[0];
+            total -= itemEliminado.precio;
+            actualizarCarrito();
+        }
+
+        // Función para vaciar el carrito
+        function vaciarCarrito() {
+            carrito = [];
+            total = 0;
+            actualizarCarrito();
+        }
+
+        // Funcionalidad de búsqueda
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe
+
+            const searchInput = document.getElementById('searchInput').value.toLowerCase(); // Obtiene el valor del campo de búsqueda
+            const products = document.querySelectorAll('.product'); // Selecciona todos los productos
+
+            // Contador para verificar si hay resultados
+            let hasResults = false;
+
+            products.forEach(product => {
+                const productName = product.getAttribute('data-name').toLowerCase(); // Obtiene el nombre del producto
+                if (productName.includes(searchInput)) {
+                    product.style.display = ''; // Muestra el producto si coincide
+                    hasResults = true; // Hay al menos un resultado
+                } else {
+                    product.style.display = 'none'; // Oculta el producto si no coincide
+                }
+            });
+
+            // Si no hay resultados, puedes mostrar un mensaje
+            if (!hasResults) {
+                alert('No se encontraron productos que coincidan con tu búsqueda.');
+            }
+        });
+    </script>
+    <section class="">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+                <div class="col mb-3">
+                    <div class="lc-block mb-3"><a class="navbar-brand" href="#">
+                            <img class="img-fluid me-1" src="https://media.istockphoto.com/id/497859268/es/vector/motocicleta-concepto-de-vector-de-repuestos.jpg?s=612x612&w=0&k=20&c=wdnLKR7PkJeMIHO3PGo4AB_u4JTIV-Rh52xFFkgtt4I=" alt="my brand" width="48px" height="48px" lc-helper="image">
+                        </a></div>
+                    <div class="lc-block">
+                        <div editable="rich">
+
+                            <p class="text-muted">© 2025 MexicanMotors</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col offset-md-2 mb-3">
+                    <div class="lc-block mb-4">
+                        <div editable="rich">
+                            <h4>PREGUNTAS FRECUENTES</h4>
+                        </div>
+                    </div>
+                    <!-- /lc-block -->
+                    <div class="lc-block small">
+                        <style>
+                            .footer-links-list ul { padding-left:0 }
+                            .footer-links-list ul li {margin-bottom:15px; list-style-type:none;padding-left:0 }
+                            .footer-links-list a {text-decoration:none; color:var(--bs-body-color);}
+                            
+                        </style>
+                        <div editable="rich" class="footer-links-list">
+
+                            <ul>
+                                <li><a href="Preguntas_Frecuentes.html">PREGUNTAS FRECUENTES</a>
+                        </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!-- /lc-block -->
+                </div>
+                <div class="col mb-3">
+                    <div class="lc-block mb-4">
+                        <div editable="rich">
+                            <h4>SOBRE NOSOTROS</h4>
+                        </div>
+                    </div>
+                    <!-- /lc-block -->
+                    <div class="lc-block small">
+                        <div editable="rich" class="footer-links-list">
+
+                            <ul>
+                                <li><a href="Ventas_a_mayoreo.html">VENTAS A MAYOREO</a></li>
+                    
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!-- /lc-block -->
+                </div>
+                <div class="col mb-3">
+                    <div class="lc-block mb-4">
+                        <div editable="rich">
+                            <h4>LEGAL</h4>
+                        </div>
+                    </div>
+                    <!-- /lc-block -->
+                    <div class="lc-block small">
+                        <div editable="rich" class="footer-links-list">
+
+                            <ul>
+                                <li><a href="aviso_de_privacidad.html">TERMINOS Y CONDICIONES</a> </li>
+                                
+                                
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!-- /lc-block -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
